@@ -1,0 +1,17 @@
+﻿using dotnetRpg.Dtos.Fight;
+using dotnetRpg.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace dotnetRpg.Services.FightService
+{
+    public interface IFightService
+    {
+        Task<ServiceResponse<AttackResultDto>> WeaponAttack(WeaponAttackDto request);
+        Task<ServiceResponse<AttackResultDto>> SkillAttack(SkillAttackDto request);
+        Task<ServiceResponse<FightResultDto>> Fight(FightRequestDto request);
+        Task<ServiceResponse<List<HighScoreDto>>> GetHighScore();
+
+
+    }
+}
